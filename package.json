@@ -7,10 +7,14 @@
     "start": "next start"
   },
   "dependencies": {
+    "@material-ui/core": "^4.12.3",
     "@supabase/supabase-js": "^1.2.1",
     "next": "latest",
+    "nookies": "^2.5.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-icons": "^4.2.0",
+    "sass": "^1.38.0",
     "swr": "0.2.3"
   },
   "license": "MIT"

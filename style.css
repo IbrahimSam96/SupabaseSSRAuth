@@ -1,29 +1,249 @@
+html,
 body {
-  font-family: Helvetica, Arial, Sans-Serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+   Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  
+   background-color:  #061829;
+
+   height: 100vh;
+   width: 100vw;
+
 }
 
-a {
-  display: block;
-  margin-bottom: 8px;
+a{
+  text-decoration: none;
+
+}
+
+.Index{
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-template-rows: repeat(8, 1fr);
+min-height: 100vh;
+
+}
+
+
+.NavigationBar{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 4.5rem);
+
+  background-color: #1c2128;
+
+}
+
+.NavigationBar .NoUserInfo{
+  justify-self: flex-end;
+  align-self: center;
+  padding: .5rem;
+
+}
+
+.NavigationBar .NoUserInfo a{
+  font-weight: 600;
+  font-size: 1.5rem;
+  padding: 5px;
+  justify-self: flex-end;
+  align-self: center;
+  font-family: -apple-system, BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif, Apple Color Emoji,Segoe UI Emoji;
+  
+  }
+
+  .bn30 {
+    border: 5em;
+    cursor: pointer;
+    outline: none;
+    font-size: 16px;
+    -webkit-transform: translate(0);
+    transform: translate(0);
+    background-image: linear-gradient(45deg, #4568dc, #b06ab3);
+    padding: 0.7em 2em;
+    border-radius: 65px;
+    box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.438);
+    -webkit-transition: box-shadow 0.25s;
+    transition: box-shadow 0.25s;
+    color: white;
+  }
+  
+  
+  .bn30:after {
+    content: "";
+    border-radius: 18px;
+    position: absolute;
+    margin: 4px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background: #0e0e10;
+  }
+  
+  .bn30:hover {
+    background-image: linear-gradient(-45deg, #4568dc, #b06ab3);
+    box-shadow: 0 12px 24px rgba(128, 128, 128, 0.1);
+  }
+  
+
+.NavigationBar .UserInfo{
+justify-self: flex-end;
+align-self: center;
+padding: 10px;
+
+border: 5em;
+cursor: pointer;
+outline: none;
+font-size: 16px;
+-webkit-transform: translate(0);
+transform: translate(0);
+background-image: linear-gradient(45deg, #4568dc, #b06ab3);
+padding: 0.7em 2em;
+border-radius: 65px;
+box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.438);
+-webkit-transition: box-shadow 0.25s;
+transition: box-shadow 0.25s;
+color: white;
+}
+
+.UserInfo:after {
+  content: "";
+  border-radius: 18px;
+  position: absolute;
+  margin: 4px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background: #0e0e10;
+}
+.UserInfo:hover {
+  background-image: linear-gradient(-45deg, #4568dc, #b06ab3);
+  box-shadow: 0 12px 24px rgba(128, 128, 128, 0.1);
+}
+
+.NavigationBar .UserInfo a{
+color: #f0f6fc;
+font-weight: 600;
+font-size: 1.5rem;
+padding: 5px;
+justify-self: flex-end;
+align-self: center;
+cursor: pointer;
+font-family: -apple-system, BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif, Apple Color Emoji,Segoe UI Emoji;
+
+}
+
+.NavigationBar .UserInfo svg{
+  color: #f0f6fc;
+  font-weight: 600;
+  font-size: 1.0rem;
   cursor: pointer;
-  text-decoration: underline;
+  
+  }
+
+ .UserTooltip{
+    display: block;
+    border-radius: 1rem;
+    position: absolute;
+    right:1rem;
+    top: 5rem;
+    width: 22rem;
+    height:15rem;
+    background: #0e0e10;
+ }
+  
+.UserTooltip button{
+width: 22rem; 
+align-self: flex-end;
+padding: 1rem;
+background-color: transparent;
+border: none; 
+color: white;
+cursor: pointer;
+position: relative;
+top: 12rem;
+  }
+
+  .UserTooltip button:hover{
+    background-image: linear-gradient(-45deg, #4568dc, #b06ab3);
+    box-shadow: 0 12px 24px rgba(128, 128, 128, 0.1);
+  }
+
+.Login{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  min-height: 100vh;
 }
 
-input {
-  display: block;
-  width: 320px;
-  font-size: 16px;
-  padding: 8px;
-  margin-bottom: 16px;
+
+.MagicLogin{
+  grid-column: 2/4;
+  grid-row: 2/6;
+justify-self: center;
+align-self: center;
+padding: 2rem;
+
+color: white;
+
+
+border: 5em;
+cursor: pointer;
+outline: none;
+font-size: 16px;
+-webkit-transform: translate(0);
+transform: translate(0);
+background-image: linear-gradient(45deg, #4568dc, #b06ab3);
+padding: 0.7em 2em;
+border-radius: 65px;
+box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.438);
+-webkit-transition: box-shadow 0.25s;
+transition: box-shadow 0.25s;
+color: white;
 }
 
-button {
-  margin-bottom: 32px;
-  cursor: pointer;
+.MagicLogin:after {
+  content: "";
+  border-radius: 18px;
+  position: absolute;
+  margin: 4px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background: #0e0e10;
 }
 
-pre {
-  background: black;
-  color: white;
-  padding: 16px;
+.MagicLogin:hover {
+  background-image: linear-gradient(-45deg, #4568dc, #b06ab3);
+  box-shadow: 0 12px 24px rgba(128, 128, 128, 0.1);
+}
+
+.MagicLogin input {
+  padding: 0.5em 2em;
+  border-radius: 65px;
+  box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.438);
+  margin: 1rem;
+}
+.MagicLogin button {
+  padding: 0.5em 2em;
+  border-radius: 65px;
+  box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.438);
+  margin: 1rem;
+}
+
+.MagicLogin .ErrorMessage{ 
+  color: red;
+  padding: 0.5em 2em;
+  font-size: 0.8rem;
+}
+.MagicLogin svg:hover{ 
+  color: red;
+
 }

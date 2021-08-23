@@ -1,13 +1,19 @@
-import { UserContextProvider } from '../lib/UserContext'
-import { supabase } from '../utils/initSupabase'
+import NavigationBar from '../components/NavigationBar'
+import { UserContextProvider } from '../Context'
+import Head from 'next/head'
+
 import './../style.css'
 
 export default function MyApp({ Component, pageProps }) {
+  
   return (
-    <main>
-      <UserContextProvider supabaseClient={supabase}>
+     <UserContextProvider >
+<Head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+</Head>
+        <NavigationBar {...pageProps} /> 
         <Component {...pageProps} />
+
       </UserContextProvider>
-    </main>
   )
 }
